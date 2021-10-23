@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# App
+The Front-End service for Listku app built with React and axios. For the Back-End or the server for this app check out this repository https://github.com/Yukii2k/Listku-Server
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
