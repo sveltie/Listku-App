@@ -5,7 +5,7 @@ const Navbar = () => {
     const { user, logout } = useGlobalContext();
 
     return (
-        <div className='wrapper'>
+        <div>
             {user && (
                 <div className='nav-links'>
                     <h5>Hello, {user}</h5>
@@ -17,5 +17,6 @@ const Navbar = () => {
         </div>
     )
 }
+
 
 export default Navbar;
