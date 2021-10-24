@@ -1,13 +1,8 @@
-.loading {
-    width: 6rem;
-    height: 6rem;
-    border: 5px solid var(--grey-400);
-    border-radius: 50%;
-    border-top-color: var(--primary-500);
-    animation: spinner 0.6s linear infinite;
-    margin: 0 auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
-.loading {
-    margin: 0 auto;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
 }
