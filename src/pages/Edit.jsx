@@ -11,7 +11,7 @@ function Update() {
         isLoading,
         editItem,
         fetchSingleTask,
-        singleTaskError: error,
+        // singleTaskError: error,
         user,
         editTask,
         editComplete
@@ -147,11 +147,6 @@ function Update() {
     )
 }
 
-const ErrorContainer = styled.section`
-  text-align: center;
-  padding-top: 6rem; ;
-`
-
 const Container = styled.section`
   header {
     text-align: center;
@@ -164,7 +159,7 @@ const Container = styled.section`
   
   .form > p {
     text-align: center;
-    color: var(--green-dark);
+    color: var(--green-light);
     letter-spacing: var(--letterSpacing);
     margin-top: 0;
   }
