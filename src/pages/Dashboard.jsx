@@ -62,7 +62,7 @@ function Dashboard() {
                 />
 
                 <button type='submit' className='btn btn-block' disabled={isLoading}>
-                    {isLoading ? 'Adding a new task' : 'Submit'}
+                    {isLoading ? 'Loading...' : 'Add Task'}
                 </button>
             </form>
             <Tasks />

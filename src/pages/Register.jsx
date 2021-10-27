@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from 'styled-components';
+import { RegisterWrapper } from "../components/components.style";
 import { useGlobalContext } from "../context/app.context";
 import { Redirect } from "react-router-dom";
 import FormRow from '../components/FormRow';
@@ -40,7 +40,7 @@ function Register() {
 
     return (
         <React.Fragment>
-            <Wrapper>
+            <RegisterWrapper>
                 <div className='container'>
                     {user && <Redirect to='/dashboard' />}
                     <div className='page'>
@@ -77,7 +77,7 @@ function Register() {
                             />
                             {/* END OF SINGLE FORM ROW */}
                             <button type='submit' className='btn btn-block' disabled={isLoading}>
-                                {isLoading ? 'Fetching User...' : 'Submit'}
+                                {isLoading ? 'Loading...' : 'Submit'}
                             </button>
                             <p>
                                 {values.isMember ? 'Not signed yet? ' : 'Already signed? '}
@@ -89,47 +89,9 @@ function Register() {
                         </form>
                     </div>
                 </div>
-            </Wrapper>
+            </RegisterWrapper>
         </React.Fragment>
     )
 }
-
-const Wrapper = styled.section`
-  display: grid;
-  align-items: center;
-
-  .logo {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 1.38rem;
-  }
-
-  .form {
-    max-width: 400;
-    border-top: 5px solid var(--primary-500);
-  }
-
-  h4 {
-    text-align: center;
-  }
-
-  p {
-    margin: 0;
-    margin-top: 1rem;
-    text-align: center;
-  }
-
-  .btn {
-    margin-top: 1rem;
-  }
-
-  .member-btn {
-    background: transparent;
-    border: transparent;
-    color: var(--primary-500);
-    cursor: pointer;
-  }
-
-`;
 
 export default Register;

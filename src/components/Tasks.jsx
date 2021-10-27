@@ -32,7 +32,7 @@ const Tasks = () => {
                     <article key={id} className='task'>
                         <p className='task-date'>{date}</p>
                         <h5>{task}</h5>
-                        <p className='task-label'>{label}</p>
+                        <p className='task-label'><span>status: {label}</span></p>
                         <div className='task-links'>
                             <Link to={`/edit/${id}`} className='task-link'>
                                 view

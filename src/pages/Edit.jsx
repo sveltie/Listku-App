@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Redirect, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Container } from './pages.style';
 import { useGlobalContext } from '../context/app.context';
 import FormRow from '../components/FormRow';
 
@@ -146,30 +146,5 @@ function Update() {
         </React.Fragment>
     )
 }
-
-const Container = styled.section`
-  header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .form h4 {
-    text-align: center;
-  }
-  
-  .form > p {
-    text-align: center;
-    color: var(--green-light);
-    letter-spacing: var(--letterSpacing);
-    margin-top: 0;
-  }
-
-  .status {
-    background: var(--grey-100);
-    border-radius: var(--borderRadius);
-    border-color: transparent;
-    padding: 0.25rem;
-  }
-`
 
 export default Update;
