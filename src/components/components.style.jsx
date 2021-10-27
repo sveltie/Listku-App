@@ -2,13 +2,19 @@ import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
 
 export const Wrapper = styled.nav`
-  background: var(--primary-600);
+  background: var(--grey-900);
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 532px) {
+    h5 {
+      display: none;
+    }
+  }
 
   .nav-center {
     width: var(--fluid-width);
@@ -29,9 +35,15 @@ export const Wrapper = styled.nav`
     margin: 0;
     margin-right: 2rem;
   }
+
    h5 {
        color: white;
-       font-size: 0.9rem;
+       font-size: 1rem;
+       background: var(--grey-800);
+      border: transparent;
+      border-radius: var(--borderRadius);
+      letter-spacing: var(--letterSpacing);
+      padding: 0.375rem 0.75rem;
    }
 `;
 
@@ -61,26 +73,37 @@ export const Container = styled.section`
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 5rem;
 
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 532px) {
+    grid-template-columns: 1fr;
+  }
+
   .task {
-    background: var(--grey-50);
+    background: var(--grey-700);
     border-radius: var(--borderRadius);
     padding: 2rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-5);
     transition: var(--transition);
+    color: var(--white);
   }
 
   .task:hover {
       box-shadow: var(--shadow-3);
-      background: var(--grey-100);
+      background: var(--grey-900);
+
   }
 
   .task h5 {
     margin-bottom: 0;
     text-transform: capitalize;
     letter-spacing: 0;
+    padding: 0.15rem;
   }
 
   .task-date {
@@ -90,10 +113,19 @@ export const Container = styled.section`
     margin: 0;
     font-size: var(--smallText);
     padding: 0.15rem 0.5rem;
-    border-top-right-radius: var(--borderRadius);
-    border-bottom-left-radius: var(--borderRadius);
-    background: var(--primary-100);
+    border-radius: var(--borderRadius);
+    background: var(--grey-900);
+    color: var(--white);
+  }
+
+  .task-label span {
+    background: var(--grey-900);
+    padding: 0.15rem 0.5rem;
+    margin-top: 0.2rem;
+    display:inline-block;
+    border-radius: var(--borderRadius);
     color: var(--primary-500);
+    font-size: 0.9rem;
   }
 
   .task-links {
@@ -134,12 +166,41 @@ export const Container = styled.section`
     color: var(--primary-500);
     text-transform: uppercase;
   }
-
-  .task-status-declined {
-    color: var(--red-dark);
-  }
-
-  .task-status-interview {
-    color: var(--green-dark);
-  }
 `
+
+export const RegisterWrapper = styled.section`
+  display: grid;
+  align-items: center;
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.38rem;
+  }
+
+  .form {
+    max-width: 400;
+    border-top: 5px solid var(--primary-500);
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+
+  .member-btn {
+    background: transparent;
+    border: transparent;
+    color: var(--primary-500);
+    cursor: pointer;
+  }
+`;
