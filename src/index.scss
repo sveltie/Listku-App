@@ -27,16 +27,16 @@
     --grey-400: #97A9B4;
     --grey-500: #64748b;
     --grey-600: #475569;
-    --grey-700: #36393f;
-    --grey-800: #2C2F33;
+    --grey-700: #2f3136;
+    --grey-800: #18191c;
     --grey-900: #23272A;
     /* rest of the colors */
     --black: #222;
     --white: #fff;
     --red-light: #f8d7da;
-    --red-dark: #842029;
+    --red-dark: #d02937;
     --green-light: #00FF00;
-    --green-dark: #0f5132;
+    --green-dark: #1f9d62;
 
     /* fonts  */
     --headingFont: 'Roboto', sans-serif;
@@ -60,10 +60,15 @@
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-5: 0 1px 3px rgba(0,0,0,0.12),
+        0 1px 2px rgba(0,0,0,0.24);
 }
 
+$bluebell: #979fd0;
+$discord-primary-grey: #36393f;
+
 body {
-    background: var(--backgroundColor);
+    background: $discord-primary-grey;
     font-family: var(--bodyFont);
     font-weight: 400;
     line-height: 1.75;
@@ -165,8 +170,9 @@ ul {
     width: 100%;
 }
 
+
 .hero-btn {
-    background: var(--grey-900);
+    background: var(--primary-400);
     font-size: 1rem;
     padding: 0.5rem 1.25rem;
     color: var(--white);
@@ -174,18 +180,31 @@ ul {
 }
 
 .hero-btn:hover {
-    background: var(--grey-700);
+    background: var(--primary-600);
     box-shadow: var(--shadow-3);
 }
 
 .btn-out {
-    background: var(--white);
+    background: var(--primary-400);
     color: var(--black);
+    color: var(--white);
 }
 
 .btn-out:hover {
-    background: var(--grey-300);
+    background: var(--primary-600);
     box-shadow: var(--shadow-3);
+}
+
+.contri-btn {
+    background: var(--grey-800);
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    color: var(--white);
+    border-radius: 50px;
+}
+
+.contri-btn:hover {
+    background: var(--grey-900);
 }
 
 .divider {
@@ -223,10 +242,16 @@ ul {
     max-width: var(--fixed-width);
     background: var(--grey-700);
     border-radius:15px;
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-5);
     padding: 2rem 2.5rem;
     margin: 3rem auto;
     color: var(--grey-100);
+    border-top: 5px solid var(--primary-400);
+
+    h4 {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .form-label {
@@ -269,24 +294,20 @@ ul {
 
 /* alert */
 
-@keyframes spinner {
+.loading {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 0.3rem solid rgba($bluebell, 0.3);
+    border-top-color: $bluebell;
+    animation: 1.5s spin infinite linear;
+    margin: 0 auto;
+}
+
+@keyframes spin {
     to {
         transform: rotate(360deg);
     }
-}
-
-.loading {
-    width: 6rem;
-    height: 6rem;
-    border: 5px solid var(--grey-400);
-    border-radius: 50%;
-    border-top-color: var(--primary-500);
-    animation: spinner 0.6s linear infinite;
-    margin: 0 auto;
-}
-
-.loading {
-    margin: 0 auto;
 }
 
 /* title */
