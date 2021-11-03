@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home, Dashboard, Register, PrivateRoute, Edit, Error } from './pages';
 import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
                 {/* HOME PAGE */}
                 <Route path='/' exact>
                     <Home />
+                    {/* <Footer /> */}
                 </Route>
                 
                 {/* DASHBOARD PAGE */}

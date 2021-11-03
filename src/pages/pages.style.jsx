@@ -11,11 +11,12 @@ export const HomeWrapper = styled.div`
   .home-img {
     display: flex;
     justify-content: center;
+    max-width: 600px;
   }
 
   @media screen and (max-width: 768px) {
         .info {
-          margin-top: -10rem;
+          margin-top: -20vw;
         }
 
         p {
@@ -63,13 +64,27 @@ export const HomeWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .mobile-img {
       display: block;
-      margin-top: -13rem;
-      margin-bottom: 4rem;
-      width: 75%;
+      margin-top: -40vw;
+      margin-bottom: 15vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: auto;
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .mobile-img {
+      display: none;
+    }
+
+    .info {
+      margin-top: 40vw;
+      margin-bottom: 10vw;
     }
   }
 `;
@@ -100,5 +115,29 @@ export const Container = styled.section`
     border-radius: var(--borderRadius);
     border-color: transparent;
     padding: 0.25rem;
+  }
+`
+
+export const ErrorContainer = styled.div`
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+
+  img {
+    max-width: 600px;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    img {
+      max-width: 300px;
+    }
   }
 `
