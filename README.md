@@ -1,4 +1,10 @@
 # App
+[Visit the web application](https://listku.netlify.app/)
+<br>
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea39e2f5-6ec1-497a-8e24-1f368a85218c/deploy-status)](https://app.netlify.com/sites/listku/deploys)
+## Overview
 The Front-End service for Listku app built with React and axios. For the Back-End or the server for this app check out this repository https://github.com/Yukii2k/Listku-Server
 
 ## Getting Started with Create React App
