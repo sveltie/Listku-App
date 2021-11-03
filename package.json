@@ -43,7 +43,7 @@
   "devDependencies": {
     "node-sass": "^6.0.0",
     "sass-loader": "^12.0.0"
- },
+  },
   "main": "index.js",
   "repository": "https://github.com/Yukii2k/Listku-App.git",
   "author": "Yukii2k",
