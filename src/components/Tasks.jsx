@@ -21,6 +21,14 @@ const Tasks = () => {
         )
     }
 
+    const trimTask = (task) => {
+        if (task.length < 25) {
+            return task;
+        } else {
+            return task.substring(0, 21) + "...";
+        }
+    }
+
     return (
         <Container>
             {tasks.map((item) => {
@@ -31,7 +39,7 @@ const Tasks = () => {
                 return (
                     <article key={id} className='task'>
                         <p className='task-date'>{date}</p>
-                        <h5>{task}</h5>
+                        <h5>{trimTask(task)}</h5>
                         <p className='task-label'><span>status: {label}</span></p>
                         <div className='task-links'>
                             <Link to={`/edit/${id}`} className='task-link'>
