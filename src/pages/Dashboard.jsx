@@ -3,7 +3,7 @@ import { useGlobalContext } from "../context/app.context";
 import FormRow from "../components/FormRow";
 import Tasks from '../components/Tasks';
 
-function Dashboard() {
+const Dashboard = () => {
     const [values, setValues] = useState({
         task: '',
         description: ''

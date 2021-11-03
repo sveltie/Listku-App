@@ -4,14 +4,13 @@ import { Container } from './pages.style';
 import { useGlobalContext } from '../context/app.context';
 import FormRow from '../components/FormRow';
 
-function Update() {
+const Update = () => {
     const { id } = useParams();
     const {
         showAlert,
         isLoading,
         editItem,
         fetchSingleTask,
-        // singleTaskError: error,
         user,
         editTask,
         editComplete
@@ -57,19 +56,6 @@ function Update() {
             <div className='loading'></div>
         )
     }
-
-    // if (!editItem || error) {
-    //     return (
-    //         <ErrorContainer className='page'>
-    //             <h5>There was an error, please try again</h5>
-
-    //             <Link to='/dashboard' className='btn'>
-    //                 dashboard
-    //             </Link>
-    //         </ErrorContainer>
-    //         // <Redirect to='/dashboard' />
-    //     )
-    // }
 
     return (
         <React.Fragment>
@@ -139,7 +125,7 @@ function Update() {
                         className='btn btn-block' 
                         disabled={isLoading}
                     >
-                        {isLoading ? 'Editing...' : 'Edit'}
+                        {isLoading ? <div className='loading-button'></div> : 'Edit'}
                     </button>
                 </form>
             </Container>

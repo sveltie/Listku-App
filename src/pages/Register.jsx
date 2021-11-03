@@ -4,7 +4,7 @@ import { useGlobalContext } from "../context/app.context";
 import { Redirect } from "react-router-dom";
 import FormRow from '../components/FormRow';
 
-function Register() {
+const Register = () => {
     const [values, setValues] = useState({
         username: '',
         email: '',

@@ -25,26 +25,51 @@ export const Wrapper = styled.nav`
     flex-wrap: wrap;
   }
 
-  .nav-links {
+  .btn-container {
+    position: relative;
+  }
+
+  .btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0 0.5rem;
+    position: relative;
+    border-radius: var(--borderRadius);
   }
 
-  .nav-links h5 {
-    margin: 0;
-    margin-right: 2rem;
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: var(--primary-500);
+    padding: 0;
+    text-align: center;
+    visibility: hidden;
+    transition: var(--transition-3);
+    border-radius: var(--borderRadius);
   }
 
-   h5 {
-       color: white;
-       font-size: 1rem;
-       background: var(--grey-800);
-      border: transparent;
-      border-radius: var(--borderRadius);
-      letter-spacing: var(--letterSpacing);
-      padding: 0.375rem 0.75rem;
-   }
+  .show-dropdown {
+    visibility: visible;
+  }
+
+  .dropdown-btn {
+    background: transparent;
+    border-color: transparent;
+    color: var(--white);
+    letter-spacing: var(--letterSpacing);
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+    border-radius: var(--borderRadius);
+  }
+
+  .dropdown-btn:hover {
+    background: var(--primary-600);
+  }
 `;
 
 export const NavLogo = styled(LinkRouter)`
@@ -62,6 +87,7 @@ export const EmptyContainer = styled.section`
   text-align: center;
   h5 {
     text-transform: none;
+    color: var(--white);
   }
 `
 export const Container = styled.section`
@@ -89,14 +115,12 @@ export const Container = styled.section`
     flex-direction: column;
     position: relative;
     box-shadow: var(--shadow-5);
-    transition: var(--transition);
+    transition: var(--transition-2);
     color: var(--white);
   }
 
   .task:hover {
-      box-shadow: var(--shadow-3);
-      background: var(--grey-900);
-
+      box-shadow: var(--shadow-6);
   }
 
   .task h5 {
