@@ -16,7 +16,7 @@ export const HomeWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
         .info {
-          margin-top: -20vw;
+          margin-top: -5vw;
         }
 
         p {
@@ -67,8 +67,8 @@ export const HomeWrapper = styled.div`
   @media screen and (max-width: 767px) {
     .mobile-img {
       display: block;
-      margin-top: -40vw;
-      margin-bottom: 15vw;
+      margin-top: -20vw;
+      margin-bottom: 20vw;
       display: flex;
       align-items: center;
       justify-content: center;
